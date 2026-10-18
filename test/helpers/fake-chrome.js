@@ -9,6 +9,9 @@ import { docsPageOp } from '../../extension/page/docs-page.js';
 import { slidesPageOp } from '../../extension/page/slides-page.js';
 import { listDocsPage } from '../../extension/page/list-page.js';
 
+// The service worker reads navigator.userAgent; Node has a navigator only from 21.
+globalThis.navigator ??= { userAgent: 'Mozilla/5.0 Chrome/140.0.0.0 (fake)' };
+
 /**
  * `progress(tab)` answers the watchdog's probe (tabs.js readProgress): return
  * {label, beat}, or a never-settling promise to model a hung page.

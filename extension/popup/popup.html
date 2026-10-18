@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon32.png" width="20" height="20" alt="">
+    <h1>Docs Bridge</h1>
+    <span id="version"></span>
+  </header>
+  <p id="state" class="state">Checking…</p>
+  <p id="detail" class="detail"></p>
+  <dl>
+    <dt>Bridge tabs open</dt><dd id="tabs">–</dd>
+    <dt>Calls this session</dt><dd id="calls">–</dd>
+  </dl>
+  <details>
+    <summary>Settings</summary>
+    <label>Hub port <input id="port" type="number" min="1" max="65535"></label>
+    <label>Browser label <input id="label" type="text" maxlength="60"></label>
+    <button id="save" type="button">Save</button>
+  </details>
+  <button id="reconnect" type="button">Reconnect now</button>
+  <script src="popup.js"></script>
+</body>
+</html>

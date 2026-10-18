@@ -1,0 +1,39 @@
+{
+  "name": "docs-bridge",
+  "version": "0.4.0",
+  "description": "Google Docs and Slides MCP server backed by a Chrome extension: agents read and edit Docs and Slides as you, in your real browser, with no API keys.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "google-docs",
+    "google-slides",
+    "chrome-extension",
+    "ai-agents"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "author": "Dylan Santwani",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylansantwani/docs-bridge.git"
+  },
+  "homepage": "https://github.com/dylansantwani/docs-bridge#readme",
+  "bugs": "https://github.com/dylansantwani/docs-bridge/issues",
+  "private": true,
+  "bin": {
+    "docs-bridge": "server/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "health": "node server/index.js --health",
+    "test": "node --test test/*.test.js",
+    "test:e2e": "node --test test/e2e/*.e2e.js",
+    "icons": "node scripts/make-icons.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.61.1"
+  }
+}

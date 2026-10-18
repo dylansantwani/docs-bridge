@@ -1,0 +1,17 @@
+:root { color-scheme: light dark; --ok: #188038; --warn: #b06000; --muted: #5f6368; }
+@media (prefers-color-scheme: dark) { :root { --ok: #81c995; --warn: #fdd663; --muted: #9aa0a6; } }
+body { font: 13px/1.4 system-ui, -apple-system, sans-serif; width: 280px; margin: 12px; }
+header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+h1 { font-size: 15px; margin: 0; flex: 1; }
+#version { color: var(--muted); font-size: 11px; }
+.state { font-weight: 600; margin: 4px 0; }
+.state.ok { color: var(--ok); }
+.state.warn { color: var(--warn); }
+.detail { color: var(--muted); margin: 0 0 8px; word-break: break-word; }
+dl { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; margin: 8px 0; }
+dt { color: var(--muted); }
+dd { margin: 0; text-align: right; }
+details { margin: 8px 0; }
+label { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 6px 0; }
+input { width: 120px; }
+button { margin-top: 4px; }
